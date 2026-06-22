@@ -1,0 +1,12 @@
+application:
+  name: sillytavern
+  pods:
+  - name: app
+    image: ghcr.io/sillytavern/sillytavern:latest
+    path: /
+    servicePorts:
+    - 8000
+    volumes:
+    - name: sillytavern-data
+      mountPath: /home/user/app/data
+      size: 5Gi
