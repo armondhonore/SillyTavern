@@ -6,7 +6,12 @@ application:
     path: /
     servicePorts:
     - 8000
+    vars:
+      SILLYTAVERN_LISTEN: "true"
+      SILLYTAVERN_WHITELISTMODE: "false"
+      SILLYTAVERN_BASICAUTHMODE: "false"
+      SILLYTAVERN_SECURITYOVERRIDE: "true"
     volumes:
     - name: sillytavern-data
-      mountPath: /home/user/app/data
+      mountPath: /home/node/app/data
       size: 5Gi
